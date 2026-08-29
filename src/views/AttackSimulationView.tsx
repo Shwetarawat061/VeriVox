@@ -182,7 +182,7 @@ export const AttackSimulationView: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 pb-16">
       
       {/* Top Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl">
+      <div className="card-raised p-lg flex flex-col md:flex-row md:items-center justify-between gap-lg">
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-lg bg-[#8B5CF6]/15 text-[#8B5CF6] border border-[#8B5CF6]/30 shadow-inner">
             <FlaskConical className="w-5 h-5" />
@@ -219,7 +219,7 @@ export const AttackSimulationView: React.FC = () => {
         <div className="lg:col-span-6 space-y-6">
           
           {/* Step 1: Select Executive Source Target */}
-          <div className="p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+          <div className="card-raised p-lg space-y-md\">
             <div className="flex items-center justify-between pb-2 border-b border-[rgba(148,163,184,0.12)]">
               <h3 className="text-xs font-bold uppercase font-mono tracking-wider text-slate-300 flex items-center gap-2">
                 <Fingerprint className="w-4 h-4 text-[#8B5CF6]" />
@@ -268,7 +268,7 @@ export const AttackSimulationView: React.FC = () => {
           </div>
 
           {/* Step 2: Synthesis Engine & Language Selection */}
-          <div className="p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+          <div className="card-raised p-lg space-y-md\">
             <div className="flex items-center justify-between pb-2 border-b border-[rgba(148,163,184,0.12)]">
               <h3 className="text-xs font-bold uppercase font-mono tracking-wider text-slate-300 flex items-center gap-2">
                 <Cpu className="w-4 h-4 text-[#22D3EE]" />
@@ -324,7 +324,7 @@ export const AttackSimulationView: React.FC = () => {
           </div>
 
           {/* Step 3: Adversarial Acoustic Perturbation Sliders */}
-          <div className="p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+          <div className="card-raised p-lg space-y-md\">
             <div className="flex items-center justify-between pb-2 border-b border-[rgba(148,163,184,0.12)]">
               <h3 className="text-xs font-bold uppercase font-mono tracking-wider text-slate-300 flex items-center gap-2">
                 <SlidersHorizontal className="w-4 h-4 text-amber-400" />
@@ -407,7 +407,7 @@ export const AttackSimulationView: React.FC = () => {
         <div className="lg:col-span-6 space-y-6">
           
           {/* Synthesized Audio Player Card */}
-          <div className="p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-5">
+          <div className="card-elevated p-lg space-y-md\">
             <div className="flex items-center justify-between pb-3 border-b border-[rgba(148,163,184,0.12)]">
               <div className="flex items-center gap-2">
                 <Volume2 className="w-5 h-5 text-[#22D3EE]" />
@@ -468,7 +468,7 @@ export const AttackSimulationView: React.FC = () => {
 
           {/* VeriVox Live Detection Verdict Panel */}
           {detectionResult && (
-            <div className="p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-5">
+            <div className="card-elevated p-lg space-y-md">
               <div className="flex items-center justify-between pb-3 border-b border-[rgba(148,163,184,0.12)]">
                 <div>
                   <div className="text-[10px] uppercase font-mono text-slate-400">VERIVOX MULTI-STAGE INFERENCE</div>

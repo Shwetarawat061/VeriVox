@@ -366,19 +366,19 @@ export const VoiceAnalysisCoreView: React.FC<VoiceAnalysisCoreViewProps> = ({
             <span className="text-[#22D3EE] font-bold text-xl flex items-center">
               <Radio className="w-6 h-6 animate-pulse" />
             </span>
-            <h1 className="text-2xl font-bold font-slab text-white tracking-tight">
+            <h1 className="heading-section">
               Voice Authenticity Analysis
             </h1>
           </div>
-          <p className="text-xs text-slate-400 mt-1 font-sans">
+          <p className="text-body-small mt-2 text-slate-300">
             Extract biological vocal cord biomarkers and neural vocoder artifacts to verify speech authenticity.
           </p>
         </div>
 
         {/* Language Context Selector matching screenshot */}
-        <div className="flex items-center gap-2 bg-[#091222] border border-[#22D3EE]/30 rounded-xl px-3 py-1.5 shadow-sm">
-          <Languages className="w-4 h-4 text-[#22D3EE] shrink-0" />
-          <span className="text-xs text-slate-300 font-medium">Language Context:</span>
+        <div className="flex items-center gap-2 bg-[#091222] border border-[#22D3EE]/30 rounded-xl px-3 py-1.5 shadow-sm flex-wrap md:flex-nowrap">
+          <Languages className="icon-sm icon-primary shrink-0" />
+          <span className="text-xs text-slate-300 font-medium whitespace-nowrap">Language Context:</span>
           <select
             value={selectedLanguage}
             onChange={(e) => setSelectedLanguage(e.target.value)}

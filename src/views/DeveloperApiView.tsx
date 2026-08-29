@@ -193,7 +193,7 @@ func main() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 pb-16">
       
       {/* Top Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl">
+      <div className="card-raised p-lg flex flex-col md:flex-row md:items-center justify-between gap-lg">
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-lg bg-[#22D3EE]/15 text-[#22D3EE] border border-[#22D3EE]/30 shadow-inner">
             <Code2 className="w-5 h-5" />
@@ -224,7 +224,7 @@ func main() {
       </div>
 
       {/* STRICT CREDENTIAL ISOLATION & PROXY MANDATE CARD */}
-      <div className="p-6 rounded-xl bg-[#0B1120] border border-[#22D3EE]/40 shadow-xl space-y-5">
+      <div className="card-elevated p-lg space-y-md">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[rgba(148,163,184,0.12)] pb-4">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-lg bg-[#22D3EE]/15 text-[#22D3EE] border border-[#22D3EE]/30">
@@ -330,7 +330,7 @@ func main() {
       </div>
 
       {/* Real-Time Edge Audio Ingestion Flow */}
-      <div className="p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+      <div className="card-raised p-lg space-y-md">
         <div>
           <h3 className="text-sm font-bold font-slab text-white">
             Real-Time Edge Audio Ingestion Pipeline
@@ -385,7 +385,7 @@ func main() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* Left: Code Snippets & Try It (7 cols) */}
-        <div className="lg:col-span-7 p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+        <div className="lg:col-span-7 card-raised p-lg space-y-md">
           
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex items-center gap-2">
@@ -440,7 +440,7 @@ func main() {
         </div>
 
         {/* Right: Real-Time JSON Response Inspector (5 cols) */}
-        <div className="lg:col-span-5 p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-3">
+        <div className="lg:col-span-5 card-raised p-lg space-y-md">
           <div className="flex items-center justify-between pb-2 border-b border-[rgba(148,163,184,0.12)]">
             <div className="flex items-center gap-2">
               <Terminal className="w-4 h-4 text-[#10B981]" />

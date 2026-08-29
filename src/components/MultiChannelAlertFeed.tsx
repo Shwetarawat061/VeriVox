@@ -144,7 +144,7 @@ export const MultiChannelAlertFeed: React.FC<MultiChannelAlertFeedProps> = ({
 
   return (
     <div 
-      className="p-4 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-3"
+      className="card-raised p-md space-y-md"
       title="Multi-Channel Alert & SOC Dispatch Feed: Staggered automated incident notifications dispatched across SMS, email, SIEM webhook, and PBX."
     >
       {/* Header */}

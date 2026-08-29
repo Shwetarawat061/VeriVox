@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ onTabChange }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Hackathon attribution banner */}
-        <div className="mb-8 p-4 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] flex flex-col md:flex-row items-center justify-between gap-4 shadow-xl">
+        <div className="mb-8 card-raised p-lg flex flex-col md:flex-row items-center justify-between gap-lg">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-lg bg-[#22D3EE]/15 border border-[#22D3EE]/30 text-[#22D3EE]">
               <Award className="w-5 h-5" />
@@ -36,14 +36,14 @@ export const Footer: React.FC<FooterProps> = ({ onTabChange }) => {
               onClick={() => onTabChange('analysis')}
               className="btn-cta-gradient px-4 py-2 rounded-lg font-bold font-mono uppercase tracking-wider text-xs flex items-center gap-1.5 shadow-lg shadow-orange-500/20 cursor-pointer"
             >
-              <Radio className="w-3.5 h-3.5" />
+              <Radio className="icon-sm" />
               Launch Voice Core
             </MagneticButton>
             <button 
               onClick={() => onTabChange('api')}
-              className="px-3.5 py-2 rounded-lg bg-[#05070B] hover:bg-slate-800 text-slate-200 font-semibold uppercase font-mono tracking-wider text-xs flex items-center gap-1.5 border border-[rgba(148,163,184,0.12)] transition-colors cursor-pointer"
+              className="btn-secondary btn-md flex items-center gap-1.5"
             >
-              <Terminal className="w-3.5 h-3.5 text-[#22D3EE]" />
+              <Terminal className="icon-sm icon-primary" />
               API Specs
             </button>
           </div>

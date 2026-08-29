@@ -203,7 +203,7 @@ export const DefensePipelineVisualizer: React.FC<DefensePipelineVisualizerProps>
   ];
 
   return (
-    <div className="p-4 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-3">
+    <div className="card-raised p-md space-y-md">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[rgba(148,163,184,0.12)] pb-2.5">
         <div className="flex items-center gap-2">

@@ -55,7 +55,7 @@ export const DetectionHistoryView: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 pb-16">
       
       {/* Top Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl">
+      <div className="card-raised p-lg flex flex-col md:flex-row md:items-center justify-between gap-lg">
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-lg bg-[#22D3EE]/15 text-[#22D3EE] border border-[#22D3EE]/30 shadow-inner">
             <History className="w-5 h-5" />
@@ -88,36 +88,36 @@ export const DetectionHistoryView: React.FC = () => {
 
       {/* Top Summary Metrics */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-4 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] space-y-1">
-          <div className="text-[10px] uppercase font-mono text-slate-400">Total Intercepts Logged</div>
+        <div className="card-flat p-md space-y-sm">
+          <div className="text-label">Total Intercepts Logged</div>
           <div className="text-xl font-bold font-mono text-white">3,842 Sessions</div>
           <div className="text-[11px] text-[#10B981] font-mono">100% Cryptographic verification</div>
         </div>
 
-        <div className="p-4 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] space-y-1">
-          <div className="text-[10px] uppercase font-mono text-slate-400">Attacks Quarantined</div>
+        <div className="card-flat p-md space-y-sm">
+          <div className="text-label">Attacks Quarantined</div>
           <div className="text-xl font-bold font-mono text-[#EF4444]">384 Intercepts</div>
           <div className="text-[11px] text-rose-300 font-mono">Zero financial leakage</div>
         </div>
 
-        <div className="p-4 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] space-y-1">
-          <div className="text-[10px] uppercase font-mono text-slate-400">Capital Secured (INR)</div>
+        <div className="card-flat p-md space-y-sm">
+          <div className="text-label">Capital Secured (INR)</div>
           <div className="text-xl font-bold font-mono text-[#10B981]">₹42.8 Crore</div>
           <div className="text-[11px] text-slate-400 font-mono">Across 18 enterprise nodes</div>
         </div>
 
-        <div className="p-4 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] space-y-1">
-          <div className="text-[10px] uppercase font-mono text-slate-400">Average Decision Latency</div>
+        <div className="card-flat p-md space-y-sm">
+          <div className="text-label">Average Decision Latency</div>
           <div className="text-xl font-bold font-mono text-[#22D3EE]">36.4 ms</div>
           <div className="text-[11px] text-cyan-300 font-mono">Sub-50ms SIH standard</div>
         </div>
       </div>
 
       {/* Main Table Container */}
-      <div className="p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+      <div className="card-raised p-lg space-y-md">
         
         {/* Filter Controls Bar */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-[rgba(148,163,184,0.12)]">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-md pb-md border-b border-[rgba(148,163,184,0.12)]">
           <div className="flex items-center gap-2">
             <h3 className="text-sm font-bold font-slab text-white">
               Incident Audit Trail ({filteredIncidents.length} Records)

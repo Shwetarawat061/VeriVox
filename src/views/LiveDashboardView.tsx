@@ -162,7 +162,7 @@ export const LiveDashboardView: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       
       {/* Top Header & Scenario Controller Bar */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-4 rounded-xl bg-[#131A2A] border border-[#1F2937] shadow-lg">
+      <div className="card-elevated flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-5">
         
         {/* Title & Live Status */}
         <div className="flex items-center gap-3">
@@ -171,7 +171,7 @@ export const LiveDashboardView: React.FC = () => {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-base sm:text-lg font-bold font-display text-white tracking-tight">
+              <h1 className="heading-subsection">
                 Live SOC Call Inspection Console
               </h1>
               <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-[#22C55E]/10 text-[#22C55E] border border-[#22C55E]/30 flex items-center gap-1.5 font-mono uppercase tracking-wider">
@@ -179,7 +179,7 @@ export const LiveDashboardView: React.FC = () => {
                 ACTIVE MONITOR
               </span>
             </div>
-            <p className="text-xs text-slate-400 font-mono">
+            <p className="text-body-small mt-1 text-slate-300">
               Smart India Hackathon 2026 · Real-Time Edge Synthesized Voice Analysis
             </p>
           </div>
@@ -191,11 +191,11 @@ export const LiveDashboardView: React.FC = () => {
             onClick={() => handleSelectScenario('cloned-cxo')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-all ${
               selectedScenarioId === 'cloned-cxo'
-                ? 'bg-[#EF4444]/15 text-[#EF4444] border-[#EF4444]/50 shadow-sm shadow-[#EF4444]/20 font-bold'
-                : 'bg-[#0A0E17] text-slate-400 border-[#1F2937] hover:text-[#E2E8F0] hover:border-slate-700'
+                ? 'bg-[#EF4444]/15 text-[#EF4444] border-[#EF4444]/50 shadow-md shadow-[#EF4444]/20 font-bold'
+                : 'bg-transparent text-slate-400 border border-[rgba(148,163,184,0.3)] hover:text-[#E2E8F0] hover:border-[rgba(148,163,184,0.5)]'
             }`}
           >
-            <ShieldAlert className="w-3.5 h-3.5 text-[#EF4444]" />
+            <ShieldAlert className="icon-sm icon-danger" />
             <span>Scenario A: Cloned CFO (Attack)</span>
           </button>
 
@@ -203,11 +203,11 @@ export const LiveDashboardView: React.FC = () => {
             onClick={() => handleSelectScenario('genuine-cxo')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-all ${
               selectedScenarioId === 'genuine-cxo'
-                ? 'bg-[#22C55E]/15 text-[#22C55E] border-[#22C55E]/50 shadow-sm shadow-[#22C55E]/20 font-bold'
-                : 'bg-[#0A0E17] text-slate-400 border-[#1F2937] hover:text-[#E2E8F0] hover:border-slate-700'
+                ? 'bg-[#22C55E]/15 text-[#22C55E] border-[#22C55E]/50 shadow-md shadow-[#22C55E]/20 font-bold'
+                : 'bg-transparent text-slate-400 border border-[rgba(148,163,184,0.3)] hover:text-[#E2E8F0] hover:border-[rgba(148,163,184,0.5)]'
             }`}
           >
-            <ShieldCheck className="w-3.5 h-3.5 text-[#22C55E]" />
+            <ShieldCheck className="icon-sm icon-success" />
             <span>Scenario B: Genuine VP (Natural)</span>
           </button>
 
@@ -215,11 +215,11 @@ export const LiveDashboardView: React.FC = () => {
             onClick={() => handleSelectScenario('custom')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-all ${
               selectedScenarioId === 'custom'
-                ? 'bg-[#2E7DFF]/15 text-[#2E7DFF] border-[#2E7DFF]/50 shadow-sm shadow-[#2E7DFF]/20 font-bold'
-                : 'bg-[#0A0E17] text-slate-400 border-[#1F2937] hover:text-[#E2E8F0] hover:border-slate-700'
+                ? 'bg-[#2E7DFF]/15 text-[#2E7DFF] border-[#2E7DFF]/50 shadow-md shadow-[#2E7DFF]/20 font-bold'
+                : 'bg-transparent text-slate-400 border border-[rgba(148,163,184,0.3)] hover:text-[#E2E8F0] hover:border-[rgba(148,163,184,0.5)]'
             }`}
           >
-            <Sliders className="w-3.5 h-3.5 text-[#2E7DFF]" />
+            <Sliders className="icon-sm icon-primary" />
             <span>Interactive Simulator</span>
           </button>
 
@@ -252,7 +252,7 @@ export const LiveDashboardView: React.FC = () => {
         <div className="lg:col-span-5 space-y-6">
           
           {/* Caller Identity Card */}
-          <div className="p-5 rounded-xl bg-[#131A2A] border border-[#1F2937] shadow-lg space-y-4">
+          <div className="card-raised p-5 space-y-4">
             
             <div className="flex items-center justify-between pb-3 border-b border-[#1F2937]">
               <div className="flex items-center gap-3">

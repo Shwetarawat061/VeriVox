@@ -44,7 +44,7 @@ export const ModelInsightsView: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 pb-16">
       
       {/* Top Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl">
+      <div className="card-raised p-lg flex flex-col md:flex-row md:items-center justify-between gap-lg">
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-lg bg-[#22D3EE]/15 text-[#22D3EE] border border-[#22D3EE]/30 shadow-inner">
             <Cpu className="w-5 h-5" />
@@ -77,7 +77,7 @@ export const ModelInsightsView: React.FC = () => {
       {/* Top Benchmark KPI Cards with Spring Counters and MotionCard Hover */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         
-        <MotionCard accentColor="#10B981" className="p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-2">
+        <MotionCard accentColor="#10B981" className="card-raised p-lg space-y-sm">
           <div className="flex items-center justify-between text-slate-400 text-xs font-mono uppercase">
             <span>Equal Error Rate (EER)</span>
             <Activity className="w-4 h-4 text-[#10B981]" />
@@ -90,7 +90,7 @@ export const ModelInsightsView: React.FC = () => {
           </div>
         </MotionCard>
 
-        <MotionCard accentColor="#22D3EE" className="p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-2">
+        <MotionCard accentColor="#22D3EE" className="card-raised p-lg space-y-sm">
           <div className="flex items-center justify-between text-slate-400 text-xs font-mono uppercase">
             <span>False Acceptance Rate (FAR)</span>
             <ShieldCheck className="w-4 h-4 text-[#22D3EE]" />
@@ -103,7 +103,7 @@ export const ModelInsightsView: React.FC = () => {
           </div>
         </MotionCard>
 
-        <MotionCard accentColor="#F59E0B" className="p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-2">
+        <MotionCard accentColor="#F59E0B" className="card-raised p-lg space-y-sm">
           <div className="flex items-center justify-between text-slate-400 text-xs font-mono uppercase">
             <span>False Rejection Rate (FRR)</span>
             <ShieldAlert className="w-4 h-4 text-amber-400" />
@@ -116,7 +116,7 @@ export const ModelInsightsView: React.FC = () => {
           </div>
         </MotionCard>
 
-        <MotionCard accentColor="#2DD4BF" className="p-5 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-2">
+        <MotionCard accentColor="#2DD4BF" className="card-raised p-lg space-y-sm">
           <div className="flex items-center justify-between text-slate-400 text-xs font-mono uppercase">
             <span>Peak Inference Latency</span>
             <Clock className="w-4 h-4 text-[#2DD4BF]" />
@@ -135,7 +135,7 @@ export const ModelInsightsView: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* Left: ROC Curve Graph (8 cols) */}
-        <div className="lg:col-span-8 p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+        <div className="lg:col-span-8 card-raised p-lg space-y-md">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-[rgba(148,163,184,0.12)]">
             <div>
               <h3 className="text-sm font-bold font-slab text-white">
@@ -193,7 +193,7 @@ export const ModelInsightsView: React.FC = () => {
         </div>
 
         {/* Right: Sub-50ms Pipeline Latency Waterfall (4 cols) */}
-        <div className="lg:col-span-4 p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+        <div className="lg:col-span-4 card-raised p-lg space-y-md">
           <div>
             <h3 className="text-sm font-bold font-slab text-white">
               Sub-50ms Latency Waterfall
@@ -234,7 +234,7 @@ export const ModelInsightsView: React.FC = () => {
       </div>
 
       {/* 8 Indian Languages Coverage & Accuracy Matrix */}
-      <div className="p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+      <div className="card-raised p-lg space-y-md">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-[rgba(148,163,184,0.12)]">
           <div>
             <h3 className="text-base font-bold font-slab text-white">
@@ -288,7 +288,7 @@ export const ModelInsightsView: React.FC = () => {
       </div>
 
       {/* Neural Vocoder Resilience Benchmark */}
-      <div className="p-6 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-4">
+      <div className="card-raised p-lg space-y-md">
         <div>
           <h3 className="text-base font-bold font-slab text-white">
             Neural Vocoder &amp; Synthesis Engine Resilience

@@ -93,7 +93,7 @@ export const RiskTrendTimelineChart: React.FC<RiskTrendTimelineChartProps> = ({
 
   return (
     <div 
-      className="p-4 rounded-xl bg-[#0B1120] border border-[rgba(148,163,184,0.12)] shadow-xl space-y-3"
+      className="card-raised p-md space-y-md"
       title="Real-Time Risk Trajectory: Temporal progression of fused risk, vocoder distortion, and biometric mismatch without lookahead bias."
     >
       {/* Header */}

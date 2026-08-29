@@ -58,38 +58,38 @@ export const AnalyticsView: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
           <div className="text-xs uppercase font-mono tracking-wider text-[#2E7DFF] font-semibold">
             Threat Intelligence &amp; Operational Metrics
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold font-display text-white mt-1">
+          <h1 className="heading-page mt-2">
             Enterprise Voice Fraud Analytics
           </h1>
-          <p className="text-xs text-slate-400 mt-1 font-mono">
+          <p className="text-body-small mt-2 text-slate-300">
             Aggregated telemetry across 3,800+ inspected corporate and banking audio sessions.
           </p>
         </div>
 
         {/* Top KPIs */}
-        <div className="flex items-center gap-3">
-          <div className="px-4 py-2.5 rounded-xl bg-[#131A2A] border border-[#1F2937] text-right">
+        <div className="flex flex-col sm:flex-row items-center gap-3">
+          <div className="card-raised px-4 py-3 text-right flex-1">
             <div className="text-[10px] text-slate-400 uppercase font-mono tracking-wider">Financial Loss Prevented</div>
-            <div className="text-lg font-bold font-mono text-[#22C55E]">₹42.8 Crore</div>
+            <div className="text-lg font-bold font-mono text-[#22C55E] mt-1">₹42.8 Crore</div>
           </div>
-          <div className="px-4 py-2.5 rounded-xl bg-[#131A2A] border border-[#1F2937] text-right">
+          <div className="card-raised px-4 py-3 text-right flex-1">
             <div className="text-[10px] text-slate-400 uppercase font-mono tracking-wider">Synthetic Attacks Blocked</div>
-            <div className="text-lg font-bold font-mono text-[#EF4444]">384 Intercepts</div>
+            <div className="text-lg font-bold font-mono text-[#EF4444] mt-1">384 Intercepts</div>
           </div>
         </div>
       </div>
 
       {/* Top 4 Metric Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-5 rounded-xl bg-[#131A2A] border border-[#1F2937] space-y-2 shadow-sm">
-          <div className="flex items-center justify-between text-slate-400 text-xs font-mono uppercase tracking-wider">
+        <div className="card-raised p-5 space-y-2">
+          <div className="flex items-center justify-between text-slate-300 text-xs font-mono uppercase tracking-wider font-semibold">
             <span>Overall Detection Accuracy</span>
-            <ShieldCheck className="w-4 h-4 text-[#22C55E]" />
+            <ShieldCheck className="icon-md icon-success" />
           </div>
           <div className="text-2xl font-bold font-mono text-white">99.4%</div>
           <div className="text-[11px] text-[#22C55E] flex items-center gap-1 font-mono font-medium">
@@ -97,35 +97,35 @@ export const AnalyticsView: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-5 rounded-xl bg-[#131A2A] border border-[#1F2937] space-y-2 shadow-sm">
-          <div className="flex items-center justify-between text-slate-400 text-xs font-mono uppercase tracking-wider">
+        <div className="card-raised p-5 space-y-2">
+          <div className="flex items-center justify-between text-slate-300 text-xs font-mono uppercase tracking-wider font-semibold">
             <span>Average Edge Latency</span>
-            <TrendingUp className="w-4 h-4 text-[#2E7DFF]" />
+            <TrendingUp className="icon-md icon-primary" />
           </div>
           <div className="text-2xl font-bold font-mono text-[#2E7DFF]">36.4 ms</div>
-          <div className="text-[11px] text-slate-400 font-mono">
+          <div className="text-[11px] text-slate-300 font-mono">
             Sub-50ms target under SIH26104
           </div>
         </div>
 
-        <div className="p-5 rounded-xl bg-[#131A2A] border border-[#1F2937] space-y-2 shadow-sm">
-          <div className="flex items-center justify-between text-slate-400 text-xs font-mono uppercase tracking-wider">
+        <div className="card-raised p-5 space-y-2">
+          <div className="flex items-center justify-between text-slate-300 text-xs font-mono uppercase tracking-wider font-semibold">
             <span>High-Risk Intercept Rate</span>
-            <ShieldAlert className="w-4 h-4 text-[#EF4444]" />
+            <ShieldAlert className="icon-md icon-danger" />
           </div>
           <div className="text-2xl font-bold font-mono text-[#EF4444]">98.8%</div>
-          <div className="text-[11px] text-slate-400 font-mono">
+          <div className="text-[11px] text-slate-300 font-mono">
             Zero verified financial leakage
           </div>
         </div>
 
-        <div className="p-5 rounded-xl bg-[#131A2A] border border-[#1F2937] space-y-2 shadow-sm">
-          <div className="flex items-center justify-between text-slate-400 text-xs font-mono uppercase tracking-wider">
+        <div className="card-raised p-5 space-y-2">
+          <div className="flex items-center justify-between text-slate-300 text-xs font-mono uppercase tracking-wider font-semibold">
             <span>Indic Languages Monitored</span>
-            <Globe className="w-4 h-4 text-[#2E7DFF]" />
+            <Globe className="icon-md icon-primary" />
           </div>
           <div className="text-2xl font-bold font-mono text-white">12 Languages</div>
-          <div className="text-[11px] text-slate-400 font-mono">
+          <div className="text-[11px] text-slate-300 font-mono">
             Pan-India accent resilience
           </div>
         </div>
@@ -135,7 +135,7 @@ export const AnalyticsView: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* 30-Day Attack vs Saved Trend (8 cols) */}
-        <div className="lg:col-span-8 p-6 rounded-xl bg-[#131A2A] border border-[#1F2937] shadow-sm space-y-4">
+        <div className="card-elevated lg:col-span-8 p-6 space-y-4">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-sm font-bold font-display text-white">
@@ -177,7 +177,7 @@ export const AnalyticsView: React.FC = () => {
         </div>
 
         {/* Most Targeted Executive Roles (4 cols) */}
-        <div className="lg:col-span-4 p-6 rounded-xl bg-[#131A2A] border border-[#1F2937] shadow-sm space-y-4">
+        <div className="card-elevated lg:col-span-4 p-6 space-y-4">
           <div>
             <h3 className="text-sm font-bold font-display text-white">
               Most Targeted Executive Roles
@@ -217,7 +217,7 @@ export const AnalyticsView: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         {/* Risk Distribution Breakdown */}
-        <div className="p-6 rounded-xl bg-[#131A2A] border border-[#1F2937] space-y-4">
+        <div className="card-elevated p-6 space-y-4">
           <div>
             <h3 className="text-sm font-bold font-display text-white">
               Risk Score Distribution Across All Monitored Calls
@@ -247,7 +247,7 @@ export const AnalyticsView: React.FC = () => {
         </div>
 
         {/* Attack Vectors by Indic Language */}
-        <div className="p-6 rounded-xl bg-[#131A2A] border border-[#1F2937] space-y-4">
+        <div className="card-elevated p-6 space-y-4">
           <div>
             <h3 className="text-sm font-bold font-display text-white">
               Attack Synthesis Vectors by Language &amp; Dialect
@@ -278,7 +278,7 @@ export const AnalyticsView: React.FC = () => {
       </div>
 
       {/* Filterable Recent Incidents Table */}
-      <div className="p-6 rounded-xl bg-[#131A2A] border border-[#1F2937] shadow-sm space-y-4">
+      <div className="card-elevated p-6 space-y-4">
         
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#1F2937]">
           <div>
@@ -291,15 +291,15 @@ export const AnalyticsView: React.FC = () => {
           </div>
 
           {/* Search and filter controls */}
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="relative">
+          <div className="flex flex-wrap items-center gap-2 w-full">
+            <div className="relative flex-1 min-w-[250px] sm:flex-none">
               <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="text"
                 placeholder="Search executive, ID, number..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-8 pr-3 py-1.5 rounded-lg bg-[#0A0E17] border border-[#1F2937] text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#2E7DFF] w-48 sm:w-64 font-mono"
+                className="w-full sm:w-48 md:w-64 pl-8 pr-3 py-1.5 rounded-lg bg-[#0A0E17] border border-[#1F2937] text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#2E7DFF] font-mono"
               />
             </div>
 
@@ -395,7 +395,7 @@ export const AnalyticsView: React.FC = () => {
       {/* Incident Detail Drawer/Modal */}
       {selectedIncident && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="w-full max-w-lg rounded-xl bg-[#131A2A] border border-[#1F2937] p-6 space-y-4 shadow-2xl">
+          <div className="card-critical w-full max-w-lg p-6 space-y-4">
             <div className="flex items-center justify-between border-b border-[#1F2937] pb-3">
               <div className="flex items-center gap-2">
                 <ShieldAlert className="w-5 h-5 text-[#EF4444]" />
