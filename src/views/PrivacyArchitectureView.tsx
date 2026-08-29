@@ -26,7 +26,7 @@ export const PrivacyArchitectureView: React.FC = () => {
         <div className="text-xs uppercase font-mono tracking-wider text-[#22C55E] font-semibold">
           Privacy-First Zero-Retention Architecture
         </div>
-        <h1 className="text-2xl sm:text-3xl font-bold font-display text-white mt-1">
+        <h1 className="text-page-title">
           Privacy &amp; India DPDP Act 2023 Alignment
         </h1>
         <p className="text-xs text-slate-400 mt-1 max-w-2xl font-mono">

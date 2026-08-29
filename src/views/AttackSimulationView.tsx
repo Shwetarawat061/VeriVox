@@ -189,7 +189,7 @@ export const AttackSimulationView: React.FC = () => {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-base sm:text-lg font-bold font-slab text-white tracking-tight">
+              <h1 className="text-page-title">
                 Adversarial Attack Simulation Lab
               </h1>
               <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-[#8B5CF6]/15 text-[#8B5CF6] border border-[#8B5CF6]/30 font-mono uppercase tracking-wider">

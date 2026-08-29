@@ -62,7 +62,7 @@ export const DetectionHistoryView: React.FC = () => {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-base sm:text-lg font-bold font-slab text-white tracking-tight">
+              <h1 className="text-page-title">
                 Detection History &amp; Forensic Audit Log
               </h1>
               <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30 font-mono uppercase tracking-wider">
@@ -119,7 +119,7 @@ export const DetectionHistoryView: React.FC = () => {
         {/* Filter Controls Bar */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-md pb-md border-b border-[rgba(148,163,184,0.12)]">
           <div className="flex items-center gap-2">
-            <h3 className="text-sm font-bold font-slab text-white">
+            <h3 className="text-subsection-heading">
               Incident Audit Trail ({filteredIncidents.length} Records)
             </h3>
           </div>

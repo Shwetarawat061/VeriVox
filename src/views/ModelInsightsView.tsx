@@ -51,7 +51,7 @@ export const ModelInsightsView: React.FC = () => {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-base sm:text-lg font-bold font-slab text-white tracking-tight">
+              <h1 className="text-page-title">
                 Model Insights, Benchmarks &amp; Indic Architecture
               </h1>
               <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30 font-mono uppercase tracking-wider">

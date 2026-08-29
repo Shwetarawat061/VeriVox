@@ -31,8 +31,6 @@ import { NavigationTab, LanguageCoverage } from '../types';
 import { INDIAN_LANGUAGES_COVERAGE } from '../data/mockData';
 import { MagneticButton } from '../components/motion/MagneticButton';
 import { ScrambleText } from '../components/motion/ScrambleText';
-import { SpringCounter } from '../components/motion/SpringCounter';
-import { CursorHeroGlow } from '../components/motion/CursorHeroGlow';
 import { MotionCard } from '../components/motion/MotionCard';
 
 interface LandingViewProps {
@@ -142,12 +140,9 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
   return (
     <div className="space-y-20 pb-16">
       
-      {/* 1. HERO SECTION WITH DEFENSE RADAR & CURSOR GLOW */}
+      {/* 1. HERO SECTION WITH DEFENSE RADAR */}
       <section className="relative pt-6 sm:pt-12 overflow-hidden">
         
-        {/* Interactive Cursor-following Soft Radial Gradient Glow */}
-        <CursorHeroGlow />
-
         {/* Ambient static blur glow */}
         <div className="absolute top-1/4 left-1/3 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-[#22D3EE]/10 via-[#8B5CF6]/10 to-transparent blur-3xl pointer-events-none rounded-full" />
         
@@ -164,7 +159,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
               </div>
 
               {/* Display Headline with Scramble Text Effect on "AI Voice Impersonation" */}
-              <h1 className="text-4xl sm:text-6xl font-bold font-serif tracking-tight text-white leading-[1.12]">
+              <h1 className="text-hero">
                 Detect. Verify. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22D3EE] via-[#2DD4BF] to-white">
                   Defend Against
@@ -206,19 +201,19 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                 <div>
                   <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Detection Time</div>
                   <div className="text-lg font-bold font-mono text-[#22D3EE]">
-                    &lt;<SpringCounter value={38} suffix=" ms" stiffness={45} damping={14} />
+                    &lt;38 ms
                   </div>
                 </div>
                 <div>
                   <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Accuracy</div>
                   <div className="text-lg font-bold font-mono text-[#10B981]">
-                    <SpringCounter value={99.5} decimals={1} suffix="%" stiffness={45} damping={14} />
+                    99.5%
                   </div>
                 </div>
                 <div>
                   <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Languages</div>
                   <div className="text-lg font-bold font-mono text-white">
-                    <SpringCounter value={12} suffix="+ Indic" stiffness={45} damping={14} />
+                    12+ Indic
                   </div>
                 </div>
               </div>
@@ -382,7 +377,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             
             <div className="space-y-1">
               <div className="text-3xl sm:text-4xl font-bold font-mono text-white tracking-tight">
-                &lt;<SpringCounter value={38} suffix="ms" stiffness={40} damping={14} />
+                &lt;38ms
               </div>
               <div className="text-xs font-semibold text-slate-300 font-mono uppercase tracking-wider">Inference Latency</div>
               <div className="text-[11px] text-slate-400 font-mono">Sliding window edge DSP</div>
@@ -390,7 +385,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
 
             <div className="space-y-1">
               <div className="text-3xl sm:text-4xl font-bold font-mono text-[#10B981] tracking-tight">
-                <SpringCounter value={99.5} decimals={1} suffix="%" stiffness={40} damping={14} />
+                99.5%
               </div>
               <div className="text-xs font-semibold text-slate-300 font-mono uppercase tracking-wider">Clone Detection Rate</div>
               <div className="text-[11px] text-slate-400 font-mono">Cross-vocoder validated</div>
@@ -398,7 +393,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
 
             <div className="space-y-1">
               <div className="text-3xl sm:text-4xl font-bold font-mono text-[#8B5CF6] tracking-tight">
-                <SpringCounter value={12} suffix="+" stiffness={40} damping={14} />
+                12+
               </div>
               <div className="text-xs font-semibold text-slate-300 font-mono uppercase tracking-wider">Indic Languages</div>
               <div className="text-[11px] text-slate-400 font-mono">Hindi, Tamil, Telugu, Marathi, etc.</div>
@@ -406,7 +401,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
 
             <div className="space-y-1">
               <div className="text-3xl sm:text-4xl font-bold font-mono text-[#F97316] tracking-tight">
-                ₹<SpringCounter value={tickerPrevention} decimals={1} suffix=" Cr+" stiffness={35} damping={12} />
+                ₹{tickerPrevention.toFixed(1)} Cr+
               </div>
               <div className="text-xs font-semibold text-slate-300 font-mono uppercase tracking-wider">Fraud Volume Shielded</div>
               <div className="text-[11px] text-slate-400 font-mono">Simulated wire threats blocked</div>
@@ -442,7 +437,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                 Financial Risk: ₹50L+
               </span>
             </div>
-            <h3 className="text-lg font-bold text-white font-serif">Executive Voice Phishing</h3>
+            <h3 className="text-subsection-heading">Executive Voice Phishing</h3>
             <p className="text-xs text-slate-300 font-mono leading-relaxed">
               Attackers scrape 5 seconds of CEO audio from earnings calls to generate high-fidelity clones instructing accounts teams to release urgent vendor wire transfers.
             </p>
@@ -462,7 +457,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                 Account Takeover
               </span>
             </div>
-            <h3 className="text-lg font-bold text-white font-serif">Banking OTP Impersonation</h3>
+            <h3 className="text-subsection-heading">Banking OTP Impersonation</h3>
             <p className="text-xs text-slate-300 font-mono leading-relaxed">
               Cloned bank manager voice calls senior citizen customers in regional dialects (Tamil, Marathi) demanding immediate OTP disclosure under threat of card deactivation.
             </p>
@@ -482,7 +477,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                 Social Engineering
               </span>
             </div>
-            <h3 className="text-lg font-bold text-white font-serif">Emergency Pretext Fraud</h3>
+            <h3 className="text-subsection-heading">Emergency Pretext Fraud</h3>
             <p className="text-xs text-slate-300 font-mono leading-relaxed">
               Scammers clone family member voices in distress (e.g. simulated police custody / hospital emergency) demanding immediate UPI payment transfers.
             </p>
@@ -525,7 +520,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             {/* LARGE BENTO TILE: Spectral Rolloff with inline frequency cutoff chart (Spans 2 columns on desktop) */}
             <MotionCard 
               accentColor="#22D3EE" 
-              className="lg:col-span-2 bg-[#05070B] p-5 sm:p-6 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#22D3EE]/50 transition-all flex flex-col justify-between space-y-5"
+              className="lg:col-span-2 card-raised p-lg space-y-5 flex flex-col justify-between hover:border-[#22D3EE]/50 transition-all"
             >
               <div className="space-y-3">
                 <div className="flex flex-wrap items-center justify-between gap-2">
@@ -540,7 +535,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-white font-serif">
+                <h3 className="text-subsection-heading">
                   Neural Vocoder High-Frequency Energy Cliff (&gt;3.8 kHz)
                 </h3>
 
@@ -626,7 +621,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             {/* TILE 2: Pitch Micro-Tremors (Glottal Involuntary Jitter) */}
             <MotionCard 
               accentColor="#2DD4BF" 
-              className="bg-[#05070B] p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#2DD4BF]/50 transition-all flex flex-col justify-between space-y-4"
+              className="card-raised p-lg space-y-4 flex flex-col justify-between hover:border-[#2DD4BF]/50 transition-all"
             >
               <div className="space-y-2.5">
                 <div className="flex items-center justify-between">
@@ -637,7 +632,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                     6.2 Hz Glottal
                   </span>
                 </div>
-                <h4 className="text-sm font-bold text-white font-serif">Involuntary Glottal Jitter</h4>
+                <h4 className="text-subsection-heading">Involuntary Glottal Jitter</h4>
                 <p className="text-xs text-slate-300 font-mono leading-relaxed">
                   Biological vocal folds produce involuntary 4–8 Hz micro-tremors during sustained phonation. AI voice generators render unnaturally smooth, static fundamental frequency (F0) flatlines.
                 </p>
@@ -667,7 +662,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             {/* TILE 3: STFT Phase Boundary Discontinuity */}
             <MotionCard 
               accentColor="#F59E0B" 
-              className="bg-[#05070B] p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#F59E0B]/50 transition-all flex flex-col justify-between space-y-4"
+              className="card-raised p-lg space-y-4 flex flex-col justify-between hover:border-[#F59E0B]/50 transition-all"
             >
               <div className="space-y-2.5">
                 <div className="flex items-center justify-between">
@@ -678,7 +673,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                     STFT Coherence
                   </span>
                 </div>
-                <h4 className="text-sm font-bold text-white font-serif">Window Stitching Artifacts</h4>
+                <h4 className="text-subsection-heading">Window Stitching Artifacts</h4>
                 <p className="text-xs text-slate-300 font-mono leading-relaxed">
                   Short-Time Fourier Transform phase spectrum exhibits frame-boundary stitching artifacts in autoregressive models, causing instantaneous phase jumps across consecutive 20ms audio windows.
                 </p>
@@ -697,7 +692,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             {/* TILE 4: Formant Alignment & Biometric 128D Cosine Similarity */}
             <MotionCard 
               accentColor="#8B5CF6" 
-              className="bg-[#05070B] p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#8B5CF6]/50 transition-all flex flex-col justify-between space-y-4"
+              className="card-raised p-lg space-y-4 flex flex-col justify-between hover:border-[#8B5CF6]/50 transition-all"
             >
               <div className="space-y-2.5">
                 <div className="flex items-center justify-between">
@@ -708,7 +703,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                     128D Vector
                   </span>
                 </div>
-                <h4 className="text-sm font-bold text-white font-serif">Vocal Tract Resonance Matching</h4>
+                <h4 className="text-subsection-heading">Vocal Tract Resonance Matching</h4>
                 <p className="text-xs text-slate-300 font-mono leading-relaxed">
                   Compares F1, F2, and F3 acoustic resonances against the target speaker's enrolled biometric baseline across Indic phonetic vowel spaces to separate voice synthesis from the authentic executive.
                 </p>
@@ -727,7 +722,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             {/* TILE 5: Aerodynamic Glottal Airflow Dynamics */}
             <MotionCard 
               accentColor="#EC4899" 
-              className="bg-[#05070B] p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#EC4899]/50 transition-all flex flex-col justify-between space-y-4"
+              className="card-raised p-lg space-y-4 flex flex-col justify-between hover:border-[#EC4899]/50 transition-all"
             >
               <div className="space-y-2.5">
                 <div className="flex items-center justify-between">
@@ -738,7 +733,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
                     Acoustic Shimmer
                   </span>
                 </div>
-                <h4 className="text-sm font-bold text-white font-serif">Subglottal Pressure Waves</h4>
+                <h4 className="text-subsection-heading">Subglottal Pressure Waves</h4>
                 <p className="text-xs text-slate-300 font-mono leading-relaxed">
                   Evaluates vocal cord closure speed and aerodynamic turbulence during aspirated stops (ख, छ, ठ, थ, फ) in Indian phonology. Clones lack organic aerodynamic pressure variations.
                 </p>
@@ -795,7 +790,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             {/* LARGE BENTO TILE: Marathi (मराठी) - Primary SIH Testbed (Spans 2 columns on desktop) */}
             <MotionCard
               accentColor="#22D3EE"
-              className="lg:col-span-2 bg-[#05070B] p-6 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#22D3EE]/60 transition-all flex flex-col justify-between space-y-5 cursor-pointer group"
+              className="lg:col-span-2 card-raised p-lg space-y-5 flex flex-col justify-between cursor-pointer group hover:border-[#22D3EE]/60 transition-all"
               onClick={() => {
                 const mrLang = INDIAN_LANGUAGES_COVERAGE.find(l => l.code === 'mr') || INDIAN_LANGUAGES_COVERAGE[0];
                 setSelectedLanguage(mrLang);
@@ -1119,7 +1114,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             
             {/* Tile 1: Zero Audio Persistence */}
-            <MotionCard accentColor="#10B981" className="bg-[#05070B] p-4 sm:p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#10B981]/50 transition-all space-y-2">
+            <MotionCard accentColor="#10B981" className="card-raised p-md space-y-2 hover:border-[#10B981]/50 transition-all">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
@@ -1138,7 +1133,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             </MotionCard>
 
             {/* Tile 2: Non-Invertible Ephemeral Vectors */}
-            <MotionCard accentColor="#10B981" className="bg-[#05070B] p-4 sm:p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#10B981]/50 transition-all space-y-2">
+            <MotionCard accentColor="#10B981" className="card-raised p-md space-y-2 hover:border-[#10B981]/50 transition-all">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
@@ -1157,7 +1152,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             </MotionCard>
 
             {/* Tile 3: DPDP Act Section 6(1) Explicit Consent */}
-            <MotionCard accentColor="#10B981" className="bg-[#05070B] p-4 sm:p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#10B981]/50 transition-all space-y-2">
+            <MotionCard accentColor="#10B981" className="card-raised p-md space-y-2 hover:border-[#10B981]/50 transition-all">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
@@ -1176,7 +1171,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             </MotionCard>
 
             {/* Tile 4: DPDP Act Section 12 Right to Erasure */}
-            <MotionCard accentColor="#10B981" className="bg-[#05070B] p-4 sm:p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#10B981]/50 transition-all space-y-2">
+            <MotionCard accentColor="#10B981" className="card-raised p-md space-y-2 hover:border-[#10B981]/50 transition-all">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
@@ -1195,7 +1190,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             </MotionCard>
 
             {/* Tile 5: Zero Frontend Secrets & Hardened Edge */}
-            <MotionCard accentColor="#10B981" className="bg-[#05070B] p-4 sm:p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#10B981]/50 transition-all space-y-2">
+            <MotionCard accentColor="#10B981" className="card-raised p-md space-y-2 hover:border-[#10B981]/50 transition-all">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
@@ -1214,7 +1209,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onNavigate }) => {
             </MotionCard>
 
             {/* Tile 6: Sovereign In-Country Data Residency */}
-            <MotionCard accentColor="#10B981" className="bg-[#05070B] p-4 sm:p-5 rounded-xl border border-[rgba(148,163,184,0.12)] hover:border-[#10B981]/50 transition-all space-y-2">
+            <MotionCard accentColor="#10B981" className="card-raised p-md space-y-2 hover:border-[#10B981]/50 transition-all">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981]" />

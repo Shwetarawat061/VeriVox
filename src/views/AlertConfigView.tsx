@@ -54,7 +54,7 @@ export const AlertConfigView: React.FC = () => {
           <div className="text-xs uppercase font-mono tracking-wider text-[#2E7DFF] font-semibold">
             Security Policy &amp; Orchestration
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold font-display text-white mt-1">
+          <h1 className="text-page-title">
             Enforcement Thresholds &amp; Alert Workflows
           </h1>
           <p className="text-xs text-slate-400 mt-1 font-mono">
